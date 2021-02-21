@@ -21,7 +21,10 @@ class AddLocationController: UITableViewController {
     
     weak var delegate: AddLocationControllerDelegate?
     private let searchBar = UISearchBar()
+    
+    //MARK: - Local search completer.A region need to add for this to work. go to -> configureSearchCompleter() function.
     private let searchCompleter = MKLocalSearchCompleter()
+    //MARK: - List of search result.
     private var searchResults = [MKLocalSearchCompletion]() {
         didSet { tableView.reloadData() }
     }
@@ -62,6 +65,7 @@ class AddLocationController: UITableViewController {
         navigationItem.titleView = searchBar
     }
     
+    //MARK: - Giving the search funtionality a Region
     func configureSearchCompleter() {
         let region = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: 2000, longitudinalMeters: 2000)
         searchCompleter.region = region
@@ -89,6 +93,8 @@ extension AddLocationController {
         let title = result.title
         let subtitle = result.subtitle
         let locationString = title + " " + subtitle
+        
+        //MARK: - String replace.
         let trimmedLocation = locationString.replacingOccurrences(of: ", United States", with: "")
         delegate?.updateLocation(locationString: trimmedLocation, type: type)
     }
@@ -97,6 +103,7 @@ extension AddLocationController {
 // MARK: - UISearchBarDelegate
 
 extension AddLocationController: UISearchBarDelegate {
+    //MARK: - Local search string.Based on this text everytime Search result will be updated.
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         searchCompleter.queryFragment = searchText
     }
@@ -105,6 +112,7 @@ extension AddLocationController: UISearchBarDelegate {
 // MARK: - MKLocalSearchCompleterDelegate
 
 extension AddLocationController: MKLocalSearchCompleterDelegate {
+    //MARK: - getting searched location using the search text.
     func completerDidUpdateResults(_ completer: MKLocalSearchCompleter) {
         searchResults = completer.results
     }

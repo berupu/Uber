@@ -12,7 +12,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="LoginController" customModule="Uber_Clone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email" borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dbw-e3-Tw3">
@@ -76,7 +76,7 @@
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="X6l-NY-tlc" kind="show" id="sRO-m8-0Ki"/>
+                                    <segue destination="X6l-NY-tlc" kind="presentation" modalPresentationStyle="fullScreen" id="sRO-m8-0Ki"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FRc-gv-3Dd">
@@ -98,14 +98,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2184.057971014493" y="141.96428571428569"/>
+            <point key="canvasLocation" x="2183" y="146"/>
         </scene>
         <!--Sign Up Controller-->
         <scene sceneID="mhh-iK-GF6">
             <objects>
                 <viewController id="X6l-NY-tlc" customClass="SignUpController" customModule="Uber_Clone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hdt-L0-aCO">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="HE4-8J-3kk">
@@ -213,7 +213,7 @@
                                             <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" id="fj2-5V-yW9"/>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="fj2-5V-yW9"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -234,7 +234,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gLz-gH-e9k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3239.130434782609" y="141.96428571428569"/>
+            <point key="canvasLocation" x="3136" y="146"/>
         </scene>
         <!--Home Controller-->
         <scene sceneID="C6z-Qa-iXV">
@@ -244,6 +244,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zju-pD-8lI" userLabel="Menu">
+                                <rect key="frame" x="-333" y="0.0" width="335" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rcg-Pk-PJY">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <connections>
@@ -258,11 +264,6 @@
                                     <action selector="actionButtonPressed:" destination="tdh-iB-ap9" eventType="touchUpInside" id="aHY-du-lfP"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zju-pD-8lI">
-                                <rect key="frame" x="10" y="10" width="8" height="6"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            </view>
                             <label opaque="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="             Where to?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gL0-gH-nN8">
                                 <rect key="frame" x="32" y="120" width="350" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -274,7 +275,7 @@
                                 <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <size key="shadowOffset" width="0.5" height="0.51000000000000001"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EW7-t5-rE9" userLabel="indicatorView">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EW7-t5-rE9" userLabel="Where to Label dot">
                                 <rect key="frame" x="55" y="142" width="6" height="6"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -283,14 +284,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g9c-NH-joe">
-                                        <rect key="frame" x="8" y="52" width="25" height="25"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button" image="back"/>
-                                        <connections>
-                                            <action selector="locationInputViewBack:" destination="tdh-iB-ap9" eventType="touchUpInside" id="LCE-dM-w3P"/>
-                                        </connections>
-                                    </button>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cQ8-qw-p76" userLabel="startLocationIndicatorView">
                                         <rect key="frame" x="23" y="97" width="6" height="6"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -333,6 +326,14 @@
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uFc-B5-8Qd" userLabel="locationInputViewBack">
+                                        <rect key="frame" x="8" y="52" width="21" height="23"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="baseline_arrow_back_black_36dp"/>
+                                        <connections>
+                                            <action selector="locationInputViewBack:" destination="tdh-iB-ap9" eventType="touchUpInside" id="x5e-Jf-7Dr"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
@@ -409,7 +410,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="UberX" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bg6-ry-h2v">
-                                        <rect key="frame" x="182" y="139" width="52" height="22"/>
+                                        <rect key="frame" x="14" y="139" width="388" height="22"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <nil key="textColor"/>
@@ -451,10 +452,12 @@
                     <navigationItem key="navigationItem" id="Av4-Ga-S7n"/>
                     <connections>
                         <outlet property="actionButton" destination="CIF-YQ-IS2" id="8sf-82-Ytc"/>
+                        <outlet property="confirmUberXButton" destination="e1U-fb-CDK" id="lAx-tk-AGu"/>
                         <outlet property="destinationTextField" destination="mrL-zm-EJf" id="nXE-ca-PPa"/>
                         <outlet property="locationInputView" destination="g8n-yO-ACv" id="PS5-pA-n8J"/>
                         <outlet property="locationInputViewUserLabel" destination="f5D-Im-GF6" id="PFp-u7-btT"/>
                         <outlet property="mapView" destination="Rcg-Pk-PJY" id="YQi-Dw-GP7"/>
+                        <outlet property="menuView" destination="zju-pD-8lI" id="fwc-jY-2ZM"/>
                         <outlet property="rideActionView" destination="p7o-Op-t54" id="Zmp-Ry-u2g"/>
                         <outlet property="rideAddressLabel" destination="Qab-uM-B7N" id="md0-6R-zrd"/>
                         <outlet property="rideTitleLabel" destination="7np-LJ-yCN" id="NUu-Fc-a38"/>
@@ -464,11 +467,13 @@
                         <outlet property="uberXview" destination="uCE-Rm-BhY" id="gaE-Vh-kYa"/>
                         <outlet property="whereToLabel" destination="gL0-gH-nN8" id="5q4-oi-aL9"/>
                         <outlet property="whereToLabelDot" destination="EW7-t5-rE9" id="BLy-8w-EB1"/>
+                        <outlet property="xCircle" destination="50d-xV-fRu" id="49x-He-OcC"/>
+                        <outlet property="xLabel" destination="Bg6-ry-h2v" id="gD4-eH-Fti"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vI9-Qg-TBZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3992.753623188406" y="141.96428571428569"/>
+            <point key="canvasLocation" x="4073.913043478261" y="145.98214285714286"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="AC2-Yg-iRw">
@@ -481,7 +486,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="4ad-tl-SwS"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="T8n-Az-KP1"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qj3-gi-LYg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -490,13 +495,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="back" width="52" height="52"/>
+        <image name="baseline_arrow_back_black_36dp" width="72" height="72"/>
         <image name="icons8-menu-50" width="50" height="50"/>
         <image name="keyboard" catalog="system" width="64" height="34"/>
         <image name="lock" catalog="system" width="64" height="64"/>
         <image name="pencil.and.ellipsis.rectangle" catalog="system" width="64" height="40"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="fj2-5V-yW9"/>
+        <segue reference="T8n-Az-KP1"/>
     </inferredMetricsTieBreakers>
 </document>

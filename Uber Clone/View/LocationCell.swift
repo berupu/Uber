@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class LocationCell : UITableViewCell {
+class LocationCell : UITableViewCell{
 
     @IBOutlet var titleLabel: UILabel!
     
@@ -19,7 +19,20 @@ class LocationCell : UITableViewCell {
     var placemark: MKPlacemark?{
              didSet {
                 titleLabel.text = placemark?.name
-                addressLabel.text = placemark?.subtitle
+                addressLabel.text = placemark?.address
              }
          }
+}
+
+
+extension MKPlacemark {
+    
+    var address: String? {
+        guard  let subThoroughfare = subThoroughfare else {return nil}
+        guard  let thoroughfare = thoroughfare else {return nil}
+        guard  let locality = locality else {return nil}
+        guard  let adminArea = administrativeArea else {return nil}
+        
+        return "\(subThoroughfare) \(thoroughfare), \(locality), \(adminArea)"
+    }
 }

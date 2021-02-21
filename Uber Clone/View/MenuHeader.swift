@@ -29,7 +29,7 @@ class MenuHeader: UIView {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 42)
         label.textColor = .white
-        label.text = user.firstInitial
+//        label.text = user.firstInitial
         return label
     }()
     
@@ -37,7 +37,7 @@ class MenuHeader: UIView {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 16)
         label.textColor = .white
-        label.text = user.fullname
+//        label.text = user.fullname
         return label
     }()
     
